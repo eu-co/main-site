@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Raleway', 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Logo animation */
+@keyframes rotate-large {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.logo-background-animation {
+  animation: rotate-large 60s linear infinite;
+}
+.logo-animated {
+  transition: transform 0.4s ease-in-out;
+}
+.logo-animated:hover {
+  transform: scale(1.8) rotate(360deg);
+}
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.faq-answer.open {
+  max-height: 80rem;
+}
+
+/* Logo colors */
+.euco-logo-pink { color: #3ab3ff; }
+.euco-logo-white { color: white; }
+
+/* Masonry grid */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  margin-bottom: 30px;
+}
