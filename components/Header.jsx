@@ -17,39 +17,27 @@ import Image from 'next/image';
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'Education', path: 'https://education.eu-co.co.uk', external: true },
+  { name: 'Concerts', path: '/concerts' },
   {
     name: 'About', path: '/about',
     dropdown: [
       { name: 'Our Story', path: '/about/our-story' },
-      { name: 'Auditions', path: '/about/auditions' },
       { name: 'Conductors', path: '/about/conductors' },
       { name: 'Opera', path: '/about/opera' },
-      { name: 'Concerto Competition', path: '/about/concerto-competition' },
+      { name: 'Outreach', path: '/about/outreach' },
+      { name: 'News', path: '/about/news' },
     ],
   },
+  { name: 'Join Us', path: '/join' },
   {
-    name: 'Concerts', path: '/concerts',
-    dropdown: [
-      { name: 'Upcoming', path: '/concerts/upcoming' },
-      { name: 'Past', path: '/concerts/past' },
-      { name: 'Outreach', path: '/concerts/outreach' },
-    ],
-  },
-  {
-    name: 'Contact Us', path: '/contact-us',
-    dropdown: [
-      { name: 'Contact Us Directly', path: '/contact-us/direct' },
-      { name: 'FAQ', path: '/contact-us/faq' },
-    ],
-  },
-  {
-    name: 'Support Us', path: '/support-us',
+    name: 'Support', path: '/support-us',
     dropdown: [
       { name: 'Our Partners', path: '/support-us/sponsors' },
-      { name: 'Sponsorship', path: '/support-us/donate' },
+      { name: 'Donate', path: '/support-us/donate' },
     ],
   },
+  { name: 'Contact', path: '/contact-us' },
+  { name: 'Education', path: 'https://education.eu-co.co.uk', external: true },
 ];
 
 export default function Header() {
@@ -83,10 +71,10 @@ export default function Header() {
             <Link href="/" className="flex items-center text-2xl font-bold text-blue-400">
               {/* Logo: Use next/image for the SVG or a PNG version */}
               <Image
-                src="/favicon/logo.png"
+                src="/app/icon.png"
                 alt="EUCO Logo"
-                width={48}
-                height={48}
+                width={32}
+                height={32}
                 className="mr-4"
                 priority
               />
