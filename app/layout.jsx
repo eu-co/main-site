@@ -11,6 +11,7 @@
 
 import './globals.css';
 import { SITE_CONFIG, getOrganizationSchema } from '@/lib/config';
+import { PostHogProvider } from './providers';
 
 // ── GLOBAL METADATA (Next.js Metadata API) ─────────────────────────────────
 // This replaces the manual <title> and <meta> tags you had in every component.
@@ -48,7 +49,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
         />
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );
